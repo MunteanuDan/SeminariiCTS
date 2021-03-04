@@ -4,16 +4,28 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 import ro.ase.cts.clase.Angajat;
+import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.readers.AngajatReader;
+import ro.ase.cts.readers.AplicantReader;
+import ro.ase.cts.readers.StudentReader;
 
 public class Program {
 
+	public static List<Aplicant> readAplicant(String fisier, AplicantReader reader) throws NumberFormatException, FileNotFoundException // in acest AplicantReader vom da StudentReader
+	{
+		return reader.readAplicants(fisier);
+	}
+	
 	public static void main(String[] args) {
-		List<Angajat> listaAngajati;
+		
+		List<Aplicant> listaAplicanti;
 		try {
-			listaAngajati = AngajatReader.readAngajati("angajati.txt");
-			for(Angajat angajat:listaAngajati)
-				System.out.println(angajat.toString());
+		//	listaAplicanti = AngajatReader.readAngajati("angajati.txt");
+		//	listaAplicanti = StudentReader.readStudents("studenti.txt");
+			
+			listaAplicanti = readAplicant("studenti.txt", new StudentReader());
+			for(Aplicant aplicant:listaAplicanti)
+				System.out.println(aplicant.toString());
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
