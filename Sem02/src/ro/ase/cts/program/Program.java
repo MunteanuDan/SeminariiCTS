@@ -11,9 +11,9 @@ import ro.ase.cts.readers.StudentReader;
 
 public class Program {
 
-	public static List<Aplicant> readAplicant(String fisier, AplicantReader reader) throws NumberFormatException, FileNotFoundException // in acest AplicantReader vom da StudentReader
+	public static List<Aplicant> readAplicant(AplicantReader reader) throws NumberFormatException, FileNotFoundException // in acest AplicantReader vom da StudentReader
 	{
-		return reader.readAplicants(fisier);
+		return reader.readAplicants();
 	}
 	
 	public static void main(String[] args) {
@@ -23,7 +23,9 @@ public class Program {
 		//	listaAplicanti = AngajatReader.readAngajati("angajati.txt");
 		//	listaAplicanti = StudentReader.readStudents("studenti.txt");
 			
-			listaAplicanti = readAplicant("studenti.txt", new StudentReader());
+		//	listaAplicanti = readAplicant("studenti.txt", new StudentReader());
+			listaAplicanti = readAplicant (new AngajatReader("angajati.txt")); // new AngajatReader() ca sa ne cream obiectul
+			
 			for(Aplicant aplicant:listaAplicanti)
 				System.out.println(aplicant.toString());
 		} catch (FileNotFoundException e) {
