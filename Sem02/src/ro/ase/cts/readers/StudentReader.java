@@ -16,20 +16,20 @@ public class StudentReader extends AplicantReader {
 	}
 
 	public List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException {
-		Scanner input = new Scanner(new File(super.numeFisier));
-		input.useDelimiter(",|\n");
+		Scanner input2 = new Scanner(new File(super.numeFisier));
+		input2.useDelimiter(",|\n");
 		List<Aplicant> studenti = new ArrayList<Aplicant>();
 
-		while (input.hasNext()) {
+		while (input2.hasNext()) {
 			Student student = new Student();
-			super.readAplicant(input, student);
-			int an_studii = input.nextInt();
-			String facultate = (input.next()).toString();
+			super.readAplicant(input2, student);
+			int an_studii = input2.nextInt();
+			String facultate = (input2.next()).toString();
 			student.setAn_studii(an_studii);
 			student.setFacultate(facultate);
 			studenti.add(student);
 		}
-		input.close();
+		input2.close();
 		return studenti;
 	}
 }
