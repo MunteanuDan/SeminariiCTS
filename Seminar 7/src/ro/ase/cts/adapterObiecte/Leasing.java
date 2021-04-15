@@ -1,4 +1,4 @@
-package ro.ase.cts.adapter;
+package ro.ase.cts.adapterObiecte;
 
 public class Leasing {
 
