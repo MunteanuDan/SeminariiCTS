@@ -2,7 +2,7 @@ package ro.ase.cts.chain;
 
 public abstract class Handler {
 	
-	private Handler succesor;
+	private Handler succesor; // pt urmatoarea za din lant
 	private float sold;
 	public Handler( float sold) { // de preferat sa nu mai punem succesorul
 		super();

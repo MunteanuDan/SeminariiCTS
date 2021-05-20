@@ -13,7 +13,7 @@ public class Sectiune implements ComponentaAbstracta{
 	public Sectiune(String denumire) {
 		super();
 		this.denumire = denumire;
-		optiuni = new ArrayList<>();
+		optiuni = new ArrayList<>(); // doar am alocat spatiu pentru Sectiuni, vom adauga ulterior cu Add diferite componente  
 	}
 
 	@Override
@@ -22,7 +22,7 @@ public class Sectiune implements ComponentaAbstracta{
 		
 		for(ComponentaAbstracta optiune : optiuni) {
 			 //System.out.println(optiune.afiseazaDescriere();
-			optiune.afiseazaDescriere(); // fara sout pt ca e de tip void
+			optiune.afiseazaDescriere(); // fara System.out.println pt ca e de tip void si trb doar sa apelez
 		}
 		
 	}

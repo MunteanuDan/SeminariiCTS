@@ -7,7 +7,7 @@ public class Client {
 	public Client(String nume) {
 		super();
 		this.nume = nume;
-		this.modPlata = new Card();
+		this.modPlata = new Card(); // modalitatea de plata default este cea cu cardul
 	}
 	
 	public void platesteNota(double suma) {
@@ -23,7 +23,7 @@ public class Client {
 		this.nume = nume;
 	}
 
-	public void setModPlata(ModalitatePlata modPlata) {
+	public void setModPlata(ModalitatePlata modPlata) { // l am facut ca sa avem posibilitatea de a modifica ModalitatePlata la runtime   
 		this.modPlata = modPlata;
 	}
 	

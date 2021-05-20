@@ -28,6 +28,8 @@ public class Main {
 //		}
 //		else System.out.println("Mai asteptati");
 		
+		
+		// De aici e Facade
 		Masa masa = new Masa(5,10);
 		if(Facade.potAsezaLaMasa(masa))
 		{

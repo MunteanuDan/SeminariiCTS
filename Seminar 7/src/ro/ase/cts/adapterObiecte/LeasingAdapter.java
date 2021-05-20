@@ -1,7 +1,7 @@
 package ro.ase.cts.adapterObiecte;
 
 public class LeasingAdapter implements Creditable {
-	private Leasing leasing;
+	private Leasing leasing; // instanta a leasing-ului
 	
 	public LeasingAdapter(Leasing leasing) {
 		super();
@@ -13,3 +13,4 @@ public class LeasingAdapter implements Creditable {
 		leasing.oferaLeasing();
 	}
 }
+// adapter-ul nu adauga functionalitati, ci le foloseste pe cele existente 

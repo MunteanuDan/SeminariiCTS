@@ -15,3 +15,5 @@ public class Main {
 	}
 
 }
+
+// aici nu mai folosim set spre deosebire de strategy

@@ -17,12 +17,12 @@ public class MainFacade {
 					System.out.println("I se ofera credit lui " + persoana.getNume());
 				}
 			}
-		}
+		} // aici verificam normal
 		
 		Persoana persoana2 = new Persoana("Alex", "1990685352267");
 		if(Facade.verificaPersoana(persoana2)) {
 			System.out.println("I se ofera credit lui " + persoana2.getNume());
-		}
+		} // aici verificam prin Facade, diferenta este ca avem un singur IF
 
 	}
 

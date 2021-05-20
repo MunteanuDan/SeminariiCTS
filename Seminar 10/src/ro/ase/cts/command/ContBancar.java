@@ -27,7 +27,7 @@ public class ContBancar {
 	}
 	
 	public void retragere(float suma) {
-		if(this.sold >= suma ) {
+		if(this.sold >= suma ) { // daca avem suma respectiva in sold
 			this.sold = this.sold - suma;
 			System.out.println("Retragere de suma" + suma);
 		} else {
@@ -36,7 +36,7 @@ public class ContBancar {
 	}
 	
 	public void depunere (float suma) {
-		this.sold = this.sold + suma;
+		this.sold = this.sold + suma; // depunem suma in sold
 		System.out.println("S-a depus suma de " + suma);
 	}
 	

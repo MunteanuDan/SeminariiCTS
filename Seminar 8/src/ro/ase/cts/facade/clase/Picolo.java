@@ -1,6 +1,6 @@
 package ro.ase.cts.facade.clase;
 
-public class Picolo {
+public class Picolo { // aici nu am facut functii statice deoarece e posibil sa avem mai multi Picolo care se ocupa de mai multe mese    
 
 	public boolean esteMasaDebarasata(int cod)
 	{

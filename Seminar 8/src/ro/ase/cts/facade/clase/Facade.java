@@ -2,7 +2,7 @@ package ro.ase.cts.facade.clase;
 
 public class Facade {
 
-	public static boolean potAsezaLaMasa(Masa masa)
+	public static boolean potAsezaLaMasa(Masa masa) // ii dam ca parametru Masa
 	{
 		GestionarMese gestionar = new GestionarMese();
 		Picolo picolo = new Picolo();
